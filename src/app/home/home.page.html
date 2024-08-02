@@ -1,20 +1,20 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Pulse Oximeter
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Heart Rate and SpO2</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>BPM: {{ bpm }}</p>
+      <p>SpO2: {{ spo2 }}</p>
+      <p id="error" *ngIf="error" style="color: red;">{{ error }}</p> <!-- Display error -->
+    </ion-card-content>
+  </ion-card>
 </ion-content>
